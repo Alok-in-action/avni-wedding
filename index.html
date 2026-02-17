@@ -1,0 +1,558 @@
+<html lang="hi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avni weds Gautam | Wedding Invitation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <style>
+        /* Custom Fonts */
+        .font-hindi {
+            font-family: 'Noto Serif Devanagari', serif;
+            line-height: 1.8;
+        }
+
+        .font-eng {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .font-tillana {
+            font-family: 'Tillana', cursive;
+        }
+
+        .font-script {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Loader Animation */
+        #loader {
+            transition: opacity 1s ease-out, visibility 1s ease-out;
+        }
+
+        .loader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Glow Animation for Names */
+        @keyframes softGlow {
+            0% {
+                text-shadow: 0 0 10px rgba(225, 29, 72, 0.1);
+            }
+
+            50% {
+                text-shadow: 0 0 20px rgba(225, 29, 72, 0.3);
+            }
+
+            100% {
+                text-shadow: 0 0 10px rgba(225, 29, 72, 0.1);
+            }
+        }
+
+        .name-glow {
+            animation: softGlow 3s infinite alternate;
+        }
+
+        /* Rotating Ring */
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff1f2;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e11d48;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#FFFBF5] text-stone-800 font-hindi antialiased overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- Loading Screen -->
+    <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#FFFBF5] text-rose-800">
+        <div class="text-3xl font-script mb-4">Jai Jinendra</div>
+        <div class="w-16 h-16 border-t-2 border-b-2 border-rose-600 rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Background Doodles & Flowers (Fixed) -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-10">
+        <!-- Top Left Flower -->
+        <svg class="absolute -top-10 -left-10 w-64 h-64 text-rose-400 floating" viewBox="0 0 200 200"
+            fill="currentColor">
+            <path
+                d="M100,20 C120,60 160,80 180,100 C160,120 120,140 100,180 C80,140 40,120 20,100 C40,80 80,60 100,20 Z">
+            </path>
+        </svg>
+        <!-- Bottom Right Mandala -->
+        <svg class="absolute -bottom-20 -right-20 w-96 h-96 text-orange-300 spin-slow" viewBox="0 0 100 100" fill="none"
+            stroke="currentColor" stroke-width="0.5">
+            <circle cx="50" cy="50" r="40"></circle>
+            <circle cx="50" cy="50" r="30"></circle>
+            <path d="M50 10 L50 90 M10 50 L90 50 M22 22 L78 78 M22 78 L78 22"></path>
+        </svg>
+        <!-- Random Doodles -->
+        <svg class="absolute top-1/3 right-10 w-12 h-12 text-rose-500" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+            </path>
+        </svg>
+        <svg class="absolute bottom-1/3 left-10 w-16 h-16 text-yellow-500" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+        </svg>
+    </div>
+
+
+
+    <!-- Main Container -->
+    <main class="relative z-10 w-full max-w-3xl mx-auto px-6 pb-20 pt-8">
+
+        <!-- Header / Mantras -->
+        <section class="text-center mb-16 space-y-4 reveal">
+            <div class="inline-block p-2 rounded-full border border-rose-200 bg-white/50 mb-4">
+                <iconify-icon icon="solar:hands-linear" class="text-rose-600 text-2xl"></iconify-icon>
+            </div>
+            <p class="text-rose-800 text-sm md:text-base font-medium leading-loose tracking-wide text-center">
+                ॥ श्री अवन्तिका पार्श्वनाथाय नमः ।।<br>
+                ॥ मंगलम् भगवान वीरो, मंगलम् गोतम प्रभु ।<br>
+                मंगलम् कुन्दकुन्दा ो, जैन धमस्तु मंगलम् ॥<br>
+                ।। मांगलिक बेलामे ।।
+            </p>
+        </section>
+
+        <!-- Hero Section: Names -->
+        <section class="text-center mb-20 relative reveal">
+            <!-- Decorative Ring behind names -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-dashed border-rose-300 rounded-full spin-slow opacity-50 pointer-events-none">
+            </div>
+
+            <div class="relative z-10">
+                <h1 class="text-6xl md:text-8xl text-rose-900 mb-2 font-tillana leading-tight name-glow">अवनी</h1>
+                <div class="flex items-center justify-center gap-4 my-2">
+                    <span class="h-[1px] w-12 bg-rose-300"></span>
+                    <span class="font-hindi text-2xl text-stone-500">संग</span>
+                    <span class="h-[1px] w-12 bg-rose-300"></span>
+                </div>
+                <h1 class="text-6xl md:text-8xl text-rose-900 font-tillana leading-tight name-glow">गोतम</h1>
+            </div>
+
+            <p class="mt-8 text-stone-600 font-medium italic text-center leading-relaxed">
+                स्नेही नवजन, सादर जय जिनेन्द्र ।<br>
+                लोड़ा परिवार उत्सुक है, आपके आतिथ्य एवं अभिनन्दन के लिए...
+            </p>
+        </section>
+
+        <!-- Timer Section -->
+        <section class="mb-16 reveal">
+            <div class="bg-white/40 backdrop-blur-md border border-rose-100 rounded-2xl p-6 shadow-sm">
+                <div class="flex justify-center gap-6 md:gap-12 text-center font-eng text-rose-900">
+                    <div>
+                        <span id="days" class="block text-3xl md:text-4xl font-medium tracking-tight">00</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-500">Days</span>
+                    </div>
+                    <div>
+                        <span id="hours" class="block text-3xl md:text-4xl font-medium tracking-tight">00</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-500">Hours</span>
+                    </div>
+                    <div>
+                        <span id="minutes" class="block text-3xl md:text-4xl font-medium tracking-tight">00</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-500">Mins</span>
+                    </div>
+                    <div>
+                        <span id="seconds" class="block text-3xl md:text-4xl font-medium tracking-tight">00</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-500">Secs</span>
+                    </div>
+                </div>
+                <div class="text-center mt-4 text-sm text-stone-500 tracking-wide">
+                    12 March 2026
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Timeline -->
+        <section class="space-y-8 mb-20 relative">
+            <div
+                class="absolute left-4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-rose-300 to-transparent">
+            </div>
+
+            <!-- Event 1 -->
+            <div class="relative pl-12 reveal group">
+                <div
+                    class="absolute left-[11px] top-2 w-2.5 h-2.5 bg-rose-500 rounded-full ring-4 ring-rose-100 group-hover:ring-rose-200 transition-all">
+                </div>
+                <div
+                    class="bg-white/60 border border-stone-100 p-5 rounded-xl hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center gap-2 mb-2 text-rose-600">
+                        <iconify-icon icon="solar:calendar-linear"></iconify-icon>
+                        <span class="text-xs font-semibold tracking-wider uppercase font-eng">बुधवार, 11 मार्च
+                            2026</span>
+                    </div>
+                    <h3 class="text-xl text-stone-800 mb-1 font-semibold">श्री गणेश पूजन एवं चाक</h3>
+                    <p class="text-stone-500 text-sm mb-4">प्रातः 8.30 बजे</p>
+
+                    <div class="border-t border-dashed border-rose-200 my-3"></div>
+
+                    <h3 class="text-xl text-stone-800 mb-1 font-semibold">हल्दी समारोह</h3>
+                    <p class="text-stone-500 text-sm mb-4">प्रातः 11 बजे</p>
+
+                    <div class="border-t border-dashed border-rose-200 my-3"></div>
+
+                    <h3 class="text-xl text-stone-800 mb-1 font-semibold">संगीत निशा</h3>
+                    <p class="text-stone-500 text-sm">सायं 7 बजे</p>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="relative pl-12 reveal group">
+                <div
+                    class="absolute left-[11px] top-2 w-2.5 h-2.5 bg-rose-500 rounded-full ring-4 ring-rose-100 group-hover:ring-rose-200 transition-all">
+                </div>
+                <div
+                    class="bg-gradient-to-br from-rose-50 to-white border border-rose-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center gap-2 mb-2 text-rose-600">
+                        <iconify-icon icon="solar:calendar-mark-linear"></iconify-icon>
+                        <span class="text-xs font-semibold tracking-wider uppercase font-eng">गुरुवार, 12 मार्च
+                            2026</span>
+                    </div>
+                    <h3 class="text-2xl text-rose-900 mb-1 font-semibold tracking-tight">आशीर्वाद समारोह एवं माधुर्यभोज
+                    </h3>
+                    <p class="text-stone-600 text-sm mb-4 flex items-center gap-2">
+                        <iconify-icon icon="solar:clock-circle-linear"></iconify-icon> समय प्रातः 11 बजे
+                    </p>
+                    <div class="bg-white/80 p-3 rounded-lg border border-rose-100 flex items-start gap-3">
+                        <iconify-icon icon="solar:map-point-linear" class="text-rose-500 text-lg mt-1"></iconify-icon>
+                        <div>
+                            <p class="text-stone-800 font-medium text-sm">अमृत गार्डन</p>
+                            <p class="text-stone-500 text-xs">सैलाना रोड़, रतलाम (म.प्र.)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parents Details -->
+        <section class="grid md:grid-cols-2 gap-6 mb-16 reveal">
+            <!-- Bride Side -->
+            <div class="bg-white/40 p-6 rounded-2xl border border-stone-200 text-center">
+                <iconify-icon icon="solar:heart-angle-linear" class="text-rose-400 text-2xl mb-3"></iconify-icon>
+
+                <div class="mb-4">
+                    <p class="text-xs text-stone-400 mb-1">सुपात्री</p>
+                    <p class="text-stone-800 font-medium leading-relaxed">स्व. श्री ताराचन्द्र जी<br>श्रीमती तीजाबाई
+                        लोढा</p>
+                </div>
+                <div>
+                    <p class="text-xs text-stone-400 mb-1">सुपुत्री</p>
+                    <p class="text-rose-900 text-lg font-semibold leading-relaxed">प्रफुल्ल-सौ. रानी लोढा</p>
+                </div>
+            </div>
+
+            <!-- Groom Side -->
+            <div class="bg-white/40 p-6 rounded-2xl border border-stone-200 text-center">
+                <iconify-icon icon="solar:heart-angle-linear" class="text-rose-400 text-2xl mb-3"></iconify-icon>
+
+                <div class="mb-4">
+                    <p class="text-xs text-stone-400 mb-1">सुपात्र</p>
+                    <p class="text-stone-800 font-medium leading-relaxed">श्री पारसमल जी-अमृतदेवी पावेचा</p>
+                </div>
+                <div>
+                    <p class="text-xs text-stone-400 mb-1">सुपुत्र</p>
+                    <p class="text-rose-900 text-lg font-semibold leading-relaxed">भूपेन्द्र जी-सो. प्रीति पावेचा</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Lists -->
+        <section class="space-y-8 mb-20 reveal">
+            <!-- Nanihal -->
+            <div class="text-center">
+                <h3 class="text-rose-800 font-semibold text-lg mb-3 flex items-center justify-center gap-2">
+                    <iconify-icon icon="solar:leaf-linear"></iconify-icon> ननिहाल पक्ष
+                </h3>
+                <p class="text-stone-600 text-sm leading-loose text-center px-4">
+                    श्रीमान धन्नालाल जी, लक्ष्मांचन्द्र जी, चन्दुलाल जी, कमल जी, राजेन्द्र जी, कैलाश जी, नरेन्द्र जी,
+                    कपिल जी, अंकित जी, अर्पित जी कटारिया परिवार एवं श्री विकास जी, प्रियेश जी चपरोट।
+                </p>
+            </div>
+
+            <hr class="border-rose-100 w-1/2 mx-auto">
+
+            <!-- Baraat -->
+            <div class="text-center">
+                <h3 class="text-rose-800 font-semibold text-lg mb-3 flex items-center justify-center gap-2">
+                    <iconify-icon icon="solar:users-group-rounded-linear"></iconify-icon> बारात
+                </h3>
+                <p class="text-stone-600 text-sm leading-loose text-center px-4">
+                    श्रीमान् पारसमल जी, श्रेणीक कुमार जी, शैतानमल जी, मनोहरलाल जी, महेन्द्रकुमार जी, प्रदीप कुमार जी,
+                    चिराग जी, नवीन कुमार जी, आशीष कुमार जी, शैलेष कुमार जी, भूपेन्द्र कुमार जी, निलेश कुमार जी, हर्ष
+                    कुमार जी, सिद्धार्थ जी, कौशल जी दक्ष जी, सहज जी पावेचा परिवार वालों के यहाँ से अमृत गार्डन, रतलाम
+                    आयेगी।
+                </p>
+            </div>
+        </section>
+
+        <!-- Darshanabhilashi & Swagat -->
+        <section class="bg-rose-50/50 rounded-3xl p-8 border border-rose-100/60 reveal">
+            <div class="grid gap-8">
+                <!-- Invite Message -->
+                <div class="text-center space-y-2">
+                    <p class="text-rose-900 italic font-medium leading-loose px-4">
+                        "इस मधुर बेला पर आपकी स्नेहमयी उपस्थिति सादर प्रार्थनीय है।<br>
+                        आपकी प्रतिक्षा में लोढ़ा परिवार..."
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 text-sm">
+                    <div>
+                        <h5 class="text-rose-700 font-semibold mb-2 border-b border-rose-200 pb-1 inline-block">
+                            दर्शनाभिलाषी</h5>
+                        <p class="text-stone-700 leading-loose">
+                            रमेशचन्द्र, अभय कुमार अशोक कुमार, सुशील कुमार महेन्द्र कुमार, भूपेन्द्र कुमार एवं समस्त
+                            लोढ़ा परिवार
+                        </p>
+                    </div>
+                    <div>
+                        <h5 class="text-rose-700 font-semibold mb-2 border-b border-rose-200 pb-1 inline-block">
+                            स्वागतातूर</h5>
+                        <p class="text-stone-700 leading-loose">
+                            कान्तिलाल जी, तेजकुमार-सौ. पुष्पा, अरुण-सो. साधना, डॉ. संजय सो. सपना, मनीष-सो. रानी,
+                            कपिल-सो. पूजा, अमन, आदिश, डॉ. संजन, ऋषि, शौर्य, शुभ, दर्श एवं समस्त लोढा परिवार
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <h5 class="text-rose-700 font-semibold mb-2 text-xs uppercase tracking-widest">विशेष आग्रह</h5>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        ऊषा-अशोक कुमार जी दूरड़ा • तनु-अमित कुमार जी गोरचा • अंकित-प्राची दरडा • मोनिका-वैभव कुमार जी
+                        धारीवाल • श्रेया आदित्य कुमार जी भटेवरा
+                    </p>
+                </div>
+                <div class="text-center">
+                    <h5 class="text-rose-700 font-semibold mb-2 text-xs uppercase tracking-widest">विनीत</h5>
+                    <p class="text-stone-800 font-medium leading-relaxed">श्रीमती तीजाबाई लोढा • प्रफुल्ल-सौ. रानी लोढा
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Kids -->
+        <footer class="mt-16 text-center reveal pb-10">
+            <div
+                class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-stone-100 mb-6">
+                <iconify-icon icon="solar:stars-linear" class="text-yellow-500"></iconify-icon>
+                <span class="text-xs font-semibold text-stone-500 uppercase tracking-widest">बाल मनुहार</span>
+                <iconify-icon icon="solar:stars-linear" class="text-yellow-500"></iconify-icon>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 text-stone-700 font-medium font-script text-xl">
+                <span>जिनांशी</span> 🌸
+                <span>जिनांश</span> 🌸
+                <span>अनंत</span> 🌸
+                <span>अनाया</span> 🌸
+                <span>माही</span> 🌸
+                <span>लक्षिका</span>
+            </div>
+
+        </footer>
+
+    </main>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="Din Shagna Da Phillauri 320 Kbps.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button (Lower Right) -->
+    <button id="musicToggle"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-rose-500 to-rose-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 active:scale-95">
+        <iconify-icon id="musicIcon" icon="solar:music-note-2-bold" class="text-2xl animate-pulse"></iconify-icon>
+    </button>
+
+    <script>
+        // Loader Logic
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+                // Trigger initial animations
+                document.querySelectorAll('.reveal').forEach((el, index) => {
+                    if (index < 2) el.classList.add('active');
+                });
+            }, 1500);
+        });
+
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Countdown Timer
+        const weddingDate = new Date('March 12, 2026 11:00:00').getTime();
+
+        const timer = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("days").innerText = "00";
+                // Optionally handle post-wedding state
+            }
+        }, 1000);
+
+        // Music Toggle Logic
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+
+        // Set volume to 50%
+        bgMusic.volume = 0.5;
+        let isPlaying = false;
+
+        // Autoplay with fallback for browser restrictions
+        const startMusic = () => {
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicIcon.setAttribute('icon', 'solar:pause-bold');
+                musicToggle.classList.add('animate-spin-slow');
+            }).catch((error) => {
+                console.log('Autoplay prevented, waiting for user interaction');
+                // If autoplay fails, try again on first user interaction
+                document.body.addEventListener('click', () => {
+                    if (!isPlaying) {
+                        bgMusic.play();
+                        isPlaying = true;
+                        musicIcon.setAttribute('icon', 'solar:pause-bold');
+                        musicToggle.classList.add('animate-spin-slow');
+                    }
+                }, { once: true });
+            });
+        };
+
+        // Start music after loader
+        window.addEventListener('load', () => {
+            setTimeout(startMusic, 1600);
+        });
+
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicIcon.setAttribute('icon', 'solar:music-note-2-bold');
+                musicToggle.classList.remove('animate-spin-slow');
+            } else {
+                bgMusic.play();
+                musicIcon.setAttribute('icon', 'solar:pause-bold');
+                musicToggle.classList.add('animate-spin-slow');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Add custom animation for music button
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin-slow {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            .animate-spin-slow {
+                animation: spin-slow 3s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+
+</html>
